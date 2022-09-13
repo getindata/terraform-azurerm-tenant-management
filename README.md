@@ -1,11 +1,11 @@
-# Azure Platform Management Terraform Module
+# Azure Tenant Management Terraform Module
 
 ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 
 <!--- Replace repository name -->
-![License](https://badgen.net/github/license/getindata/terraform-azurerm-management/)
-![Release](https://badgen.net/github/release/getindata/terraform-azurerm-management/)
+![License](https://badgen.net/github/license/getindata/terraform-azurerm-tenant-management/)
+![Release](https://badgen.net/github/release/getindata/terraform-azurerm-tenant-management/)
 
 <p align="center">
   <img height="150" src="https://getindata.com/img/logo.svg">
@@ -23,7 +23,7 @@ to specific scope e.g. subscription or management groups.
 ## USAGE
 ```terraform
 module "platform_management" {
-  source = "github.com/getindata/terraform-azurerm-platform-management"
+  source = "github.com/getindata/terraform-azurerm-tenant-management"
 
   management_groups = {
     level_1_mgmt_group = {
@@ -188,8 +188,8 @@ Apache 2 Licensed. See [LICENSE](LICENSE) for full details.
 ## AUTHORS
 
 <!--- Replace repository name -->
-<a href="https://github.com/getindata/terraform-azurerm-management/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=getindata/terraform-azurerm-management" />
+<a href="https://github.com/getindata/terraform-azurerm-tenant-management/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=getindata/terraform-azurerm-tenant-management" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
