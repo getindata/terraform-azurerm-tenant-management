@@ -13,6 +13,13 @@ module "this_subscription" {
 
   subscription_id     = var.subscription_id
   management_group_id = var.management_group_id
+
+  billing_enrollment_account_scope               = var.billing_enrollment_account_scope
+  refresh_token                                  = var.refresh_token
+  diagnostics_log_analytics_workspace_id         = var.diagnostics_log_analytics_workspace_id
+  diagnostics_categories_flag_map                = var.diagnostics_categories_flag_map
+  consumption_budgets                            = var.consumption_budgets
+  default_consumption_budget_notification_emails = var.default_consumption_budget_notification_emails
 }
 
 module "ad_groups" {
