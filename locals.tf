@@ -18,12 +18,12 @@ locals {
     for k, v in local.mgmt_group_level_5 : { for child_name, child in lookup(v, "management_groups", {}) : "${k}-${child_name}" => merge({ parent = k, name = child_name }, child) }
   ]...)
 
-  default_ad_groups = {
+  default_ad_groups_for_resource_containers = merge({
     contributors = {
       role_names = ["Contributor"]
     }
     readers = {
       role_names = ["Reader"]
     }
-  }
+  }, var.default_ad_groups_for_resource_containers)
 }

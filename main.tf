@@ -22,7 +22,7 @@ module "management_group_level_1" {
 
   ad_groups                                 = lookup(each.value, "ad_groups", {})
   create_default_ad_groups                  = lookup(each.value, "create_default_ad_groups", false)
-  default_ad_groups_for_resource_containers = var.default_ad_groups_for_resource_containers
+  default_ad_groups_for_resource_containers = local.default_ad_groups_for_resource_containers
 }
 
 module "management_group_level_2" {
@@ -49,7 +49,7 @@ module "management_group_level_2" {
 
   ad_groups                                 = lookup(each.value, "ad_groups", {})
   create_default_ad_groups                  = lookup(each.value, "create_default_ad_groups", false)
-  default_ad_groups_for_resource_containers = var.default_ad_groups_for_resource_containers
+  default_ad_groups_for_resource_containers = local.default_ad_groups_for_resource_containers
 }
 
 module "management_group_level_3" {
@@ -76,7 +76,7 @@ module "management_group_level_3" {
 
   ad_groups                                 = lookup(each.value, "ad_groups", {})
   create_default_ad_groups                  = lookup(each.value, "create_default_ad_groups", false)
-  default_ad_groups_for_resource_containers = var.default_ad_groups_for_resource_containers
+  default_ad_groups_for_resource_containers = local.default_ad_groups_for_resource_containers
 }
 
 module "management_group_level_4" {
@@ -103,7 +103,7 @@ module "management_group_level_4" {
 
   ad_groups                                 = lookup(each.value, "ad_groups", {})
   create_default_ad_groups                  = lookup(each.value, "create_default_ad_groups", false)
-  default_ad_groups_for_resource_containers = var.default_ad_groups_for_resource_containers
+  default_ad_groups_for_resource_containers = local.default_ad_groups_for_resource_containers
 }
 
 module "management_group_level_5" {
@@ -130,7 +130,7 @@ module "management_group_level_5" {
 
   ad_groups                                 = lookup(each.value, "ad_groups", {})
   create_default_ad_groups                  = lookup(each.value, "create_default_ad_groups", false)
-  default_ad_groups_for_resource_containers = var.default_ad_groups_for_resource_containers
+  default_ad_groups_for_resource_containers = local.default_ad_groups_for_resource_containers
 }
 
 module "management_group_level_6" {
@@ -157,5 +157,5 @@ module "management_group_level_6" {
 
   ad_groups                                 = lookup(each.value, "ad_groups", {})
   create_default_ad_groups                  = lookup(each.value, "create_default_ad_groups", false)
-  default_ad_groups_for_resource_containers = var.default_ad_groups_for_resource_containers
+  default_ad_groups_for_resource_containers = local.default_ad_groups_for_resource_containers
 }
