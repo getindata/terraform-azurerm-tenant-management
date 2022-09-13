@@ -6,6 +6,8 @@ sections:
   hide: []
   show: [all]
 
+header-from: main.tf
+
 content: |-
   {{ .Header }}
 
@@ -38,9 +40,6 @@ output-values:
 sort:
   enabled: true
   by: name
-
-recursive:
-  enabled: true
 
 settings:
   anchor: true
