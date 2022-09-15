@@ -15,7 +15,7 @@ module "management_group_level_1" {
     parameters   = lookup(v, "parameters", {})
   } }
   subscriptions = { for k, v in lookup(each.value, "subscriptions", {}) : k => {
-    subscription_id          = lookup(v, "id", null)
+    subscription_id          = lookup(v, "subscription_id", null)
     create_default_ad_groups = lookup(v, "create_default_ad_groups", false)
     ad_groups                = lookup(v, "ad_groups", {})
   } }
@@ -42,7 +42,7 @@ module "management_group_level_2" {
     parameters   = lookup(v, "parameters", {})
   } }
   subscriptions = { for k, v in lookup(each.value, "subscriptions", {}) : k => {
-    subscription_id          = lookup(v, "id", null)
+    subscription_id          = lookup(v, "subscription_id", null)
     create_default_ad_groups = lookup(v, "create_default_ad_groups", false)
     ad_groups                = lookup(v, "ad_groups", {})
   } }
@@ -69,7 +69,7 @@ module "management_group_level_3" {
     parameters   = lookup(v, "parameters", {})
   } }
   subscriptions = { for k, v in lookup(each.value, "subscriptions", {}) : k => {
-    subscription_id          = lookup(v, "id", null)
+    subscription_id          = lookup(v, "subscription_id", null)
     create_default_ad_groups = lookup(v, "create_default_ad_groups", false)
     ad_groups                = lookup(v, "ad_groups", {})
   } }
@@ -96,7 +96,7 @@ module "management_group_level_4" {
     parameters   = lookup(v, "parameters", {})
   } }
   subscriptions = { for k, v in lookup(each.value, "subscriptions", {}) : k => {
-    subscription_id          = lookup(v, "id", null)
+    subscription_id          = lookup(v, "subscription_id", null)
     create_default_ad_groups = lookup(v, "create_default_ad_groups", false)
     ad_groups                = lookup(v, "ad_groups", {})
   } }
@@ -123,7 +123,7 @@ module "management_group_level_5" {
     parameters   = lookup(v, "parameters", {})
   } }
   subscriptions = { for k, v in lookup(each.value, "subscriptions", {}) : k => {
-    subscription_id          = lookup(v, "id", null)
+    subscription_id          = lookup(v, "subscription_id", null)
     create_default_ad_groups = lookup(v, "create_default_ad_groups", false)
     ad_groups                = lookup(v, "ad_groups", {})
   } }
@@ -150,7 +150,7 @@ module "management_group_level_6" {
     parameters   = lookup(v, "parameters", {})
   } }
   subscriptions = { for k, v in lookup(each.value, "subscriptions", {}) : k => {
-    subscription_id          = lookup(v, "id", null)
+    subscription_id          = lookup(v, "subscription_id", null)
     create_default_ad_groups = lookup(v, "create_default_ad_groups", false)
     ad_groups                = lookup(v, "ad_groups", {})
   } }

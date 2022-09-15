@@ -41,7 +41,7 @@ module "platform_management" {
         level_2_mgmt_group = {
           subscriptions = {
             pay-as-you-go-main = {
-              id = "00000000-0000-0000-0000-000000000000" #existing subscription managed via Alias
+              subscription_id = "00000000-0000-0000-0000-000000000000" #existing subscription managed via Alias
             }  
           }
         }
@@ -159,6 +159,7 @@ You can only manage existing subscriptions. Support for creating subscriptions u
 |------|-------------|
 | <a name="output_ad_groups"></a> [ad\_groups](#output\_ad\_groups) | Map of all AD Groups created by this module flatten to one level |
 | <a name="output_management_groups"></a> [management\_groups](#output\_management\_groups) | Map of Management Groups flatten to one level |
+| <a name="output_subscriptions"></a> [subscriptions](#output\_subscriptions) | Map of Subscriptions flatten to one level |
 
 ## Providers
 
