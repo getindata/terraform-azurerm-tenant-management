@@ -36,7 +36,7 @@ module "this_azure_management" {
           subscriptions = {
             pay-as-you-go-main = {
               create_default_ad_groups = true
-              id                       = "00000000-0000-0000-0000-000000000000" #existing subscription managed via Alias
+              subscription_id          = "00000000-0000-0000-0000-000000000000" #existing subscription managed via Alias
             }
           }
         }

@@ -10,6 +10,30 @@ output "management_groups" {
   description = "Map of Management Groups flatten to one level"
 }
 
+output "subscriptions" {
+  value = merge(
+    merge([
+      for k, v in module.management_group_level_1 : { for sub_name, subscription in v.subscriptions : "${k}-${sub_name}" => subscription }
+    ]...),
+    merge([
+      for k, v in module.management_group_level_2 : { for sub_name, subscription in v.subscriptions : "${k}-${sub_name}" => subscription }
+    ]...),
+    merge([
+      for k, v in module.management_group_level_3 : { for sub_name, subscription in v.subscriptions : "${k}-${sub_name}" => subscription }
+    ]...),
+    merge([
+      for k, v in module.management_group_level_4 : { for sub_name, subscription in v.subscriptions : "${k}-${sub_name}" => subscription }
+    ]...),
+    merge([
+      for k, v in module.management_group_level_5 : { for sub_name, subscription in v.subscriptions : "${k}-${sub_name}" => subscription }
+    ]...),
+    merge([
+      for k, v in module.management_group_level_6 : { for sub_name, subscription in v.subscriptions : "${k}-${sub_name}" => subscription }
+    ]...),
+  )
+  description = "Map of Subscriptions flatten to one level"
+}
+
 output "ad_groups" {
   value = merge(
     merge([
