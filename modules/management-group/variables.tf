@@ -5,6 +5,7 @@ variable "subscriptions" {
     ad_groups : map(object({
       role_names : list(string)
     }))
+    consumption_budgets = any
   }))
   description = "Map of subscription that will be created/managed within the management group"
   default     = {}

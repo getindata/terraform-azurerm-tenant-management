@@ -46,6 +46,8 @@ module "subscription" {
   ad_groups                                 = each.value.ad_groups
   create_default_ad_groups                  = each.value.create_default_ad_groups
   default_ad_groups_for_resource_containers = var.default_ad_groups_for_resource_containers
+
+  consumption_budgets = each.value.consumption_budgets
 }
 
 module "ad_groups" {
