@@ -24,7 +24,7 @@ locals {
           notifications = { for notification_name, notification in merge(
             lookup(budget, "default_notifications_enabled", true) ? var.default_consumption_budgets_notifications : {}, lookup(budget, "notifications", {})
             ) : notification_name => merge(notification, {
-              contact_emails = concat(notification.contact_emails, lookup(budget, "default_contact_emails", []), )
+              contact_emails = concat(var.default_consumption_budget_notification_emails, notification.contact_emails, lookup(budget, "default_contact_emails", []))
           }) }
         } }
       } }
@@ -56,7 +56,7 @@ locals {
           notifications = { for notification_name, notification in merge(
             lookup(budget, "default_notifications_enabled", true) ? var.default_consumption_budgets_notifications : {}, lookup(budget, "notifications", {})
             ) : notification_name => merge(notification, {
-              contact_emails = concat(notification.contact_emails, lookup(budget, "default_contact_emails", []), )
+              contact_emails = concat(var.default_consumption_budget_notification_emails, notification.contact_emails, lookup(budget, "default_contact_emails", []))
           }) }
         } }
       } }
@@ -90,7 +90,7 @@ locals {
           notifications = { for notification_name, notification in merge(
             lookup(budget, "default_notifications_enabled", true) ? var.default_consumption_budgets_notifications : {}, lookup(budget, "notifications", {})
             ) : notification_name => merge(notification, {
-              contact_emails = concat(notification.contact_emails, lookup(budget, "default_contact_emails", []), )
+              contact_emails = concat(var.default_consumption_budget_notification_emails, notification.contact_emails, lookup(budget, "default_contact_emails", []))
           }) }
         } }
       } }
@@ -124,7 +124,7 @@ locals {
           notifications = { for notification_name, notification in merge(
             lookup(budget, "default_notifications_enabled", true) ? var.default_consumption_budgets_notifications : {}, lookup(budget, "notifications", {})
             ) : notification_name => merge(notification, {
-              contact_emails = concat(notification.contact_emails, lookup(budget, "default_contact_emails", []), )
+              contact_emails = concat(var.default_consumption_budget_notification_emails, notification.contact_emails, lookup(budget, "default_contact_emails", []))
           }) }
         } }
       } }
@@ -158,7 +158,7 @@ locals {
           notifications = { for notification_name, notification in merge(
             lookup(budget, "default_notifications_enabled", true) ? var.default_consumption_budgets_notifications : {}, lookup(budget, "notifications", {})
             ) : notification_name => merge(notification, {
-              contact_emails = concat(notification.contact_emails, lookup(budget, "default_contact_emails", []), )
+              contact_emails = concat(var.default_consumption_budget_notification_emails, notification.contact_emails, lookup(budget, "default_contact_emails", []))
           }) }
         } }
       } }
@@ -192,7 +192,7 @@ locals {
           notifications = { for notification_name, notification in merge(
             lookup(budget, "default_notifications_enabled", true) ? var.default_consumption_budgets_notifications : {}, lookup(budget, "notifications", {})
             ) : notification_name => merge(notification, {
-              contact_emails = concat(notification.contact_emails, lookup(budget, "default_contact_emails", []), )
+              contact_emails = concat(var.default_consumption_budget_notification_emails, notification.contact_emails, lookup(budget, "default_contact_emails", []))
           }) }
         } }
       } }
