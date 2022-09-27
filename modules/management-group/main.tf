@@ -21,7 +21,7 @@ module "this_management_group" {
   parent_management_group_id = var.parent_management_group_id
 
   management_group_policies = {
-    for assignment_name, policy in var.policies : assignment_name => {
+    for assignment_name, policy in local.policies : assignment_name => {
       policy_definition_id = data.azurerm_policy_definition.this[assignment_name].id
       parameters = { for param_name, param_value in lookup(policy, "parameters", {}) : param_name => {
         value = param_value
@@ -37,7 +37,7 @@ module "subscription" {
   source  = "../subscription"
   context = module.this.context
 
-  for_each = var.subscriptions
+  for_each = local.subscriptions
 
   name = each.key
 
@@ -46,6 +46,8 @@ module "subscription" {
   ad_groups                                 = each.value.ad_groups
   create_default_ad_groups                  = each.value.create_default_ad_groups
   default_ad_groups_for_resource_containers = var.default_ad_groups_for_resource_containers
+
+  consumption_budgets = each.value.consumption_budgets
 }
 
 module "ad_groups" {

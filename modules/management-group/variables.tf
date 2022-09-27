@@ -1,11 +1,5 @@
 variable "subscriptions" {
-  type = map(object({
-    subscription_id : string
-    create_default_ad_groups : bool
-    ad_groups : map(object({
-      role_names : list(string)
-    }))
-  }))
+  type        = any
   description = "Map of subscription that will be created/managed within the management group"
   default     = {}
 }
@@ -32,6 +26,31 @@ variable "create_default_ad_groups" {
   default     = false
 }
 
+variable "default_consumption_budgets_notifications" {
+  description = <<EOT
+    Configuration of default notifications
+    map(object({
+      operator       = string
+      threshold      = string
+      threshold_type = string
+      contact_emails = list(string)
+    }))
+  EOT
+  type = map(object({
+    operator       = string
+    threshold      = string
+    threshold_type = string
+    contact_emails = list(string)
+  }))
+  default = {}
+}
+
+variable "default_consumption_budget_notification_emails" {
+  description = "List of e-mail addresses that will be used for notifications if they were not provided explicitly"
+  type        = list(string)
+  default     = []
+}
+
 ###################################################
 ## Downstream management group module variables
 ###################################################
@@ -49,11 +68,7 @@ variable "parent_management_group_id" {
 }
 
 variable "policies" {
-  type = map(object({
-    display_name : string
-    enabled : bool
-    parameters : any
-  }))
+  type        = any
   description = "Map of built-in Azure policies with respective parameters"
   default     = {}
 }

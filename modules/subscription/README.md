@@ -46,7 +46,7 @@ which adds support for Azure AD groups.
 |------|--------|---------|
 | <a name="module_ad_groups"></a> [ad\_groups](#module\_ad\_groups) | getindata/group/azuread | 1.0.0 |
 | <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
-| <a name="module_this_subscription"></a> [this\_subscription](#module\_this\_subscription) | getindata/subscription/azurerm | 1.0.1 |
+| <a name="module_this_subscription"></a> [this\_subscription](#module\_this\_subscription) | getindata/subscription/azurerm | 1.1.0 |
 
 ## Outputs
 
