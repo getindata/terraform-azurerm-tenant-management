@@ -13,6 +13,9 @@ module "management_group_level_1" {
   subscriptions            = each.value.subscriptions
   ad_groups                = each.value.ad_groups
   create_default_ad_groups = each.value.create_default_ad_groups
+
+  default_consumption_budget_notification_emails = var.default_consumption_budget_notification_emails
+  default_consumption_budgets_notifications      = var.default_consumption_budgets_notifications
 }
 
 module "management_group_level_2" {
@@ -30,6 +33,9 @@ module "management_group_level_2" {
   subscriptions            = each.value.subscriptions
   ad_groups                = each.value.ad_groups
   create_default_ad_groups = each.value.create_default_ad_groups
+
+  default_consumption_budget_notification_emails = var.default_consumption_budget_notification_emails
+  default_consumption_budgets_notifications      = var.default_consumption_budgets_notifications
 }
 
 module "management_group_level_3" {
@@ -47,6 +53,9 @@ module "management_group_level_3" {
   subscriptions            = each.value.subscriptions
   ad_groups                = each.value.ad_groups
   create_default_ad_groups = each.value.create_default_ad_groups
+
+  default_consumption_budget_notification_emails = var.default_consumption_budget_notification_emails
+  default_consumption_budgets_notifications      = var.default_consumption_budgets_notifications
 }
 
 module "management_group_level_4" {
@@ -64,6 +73,9 @@ module "management_group_level_4" {
   subscriptions            = each.value.subscriptions
   ad_groups                = each.value.ad_groups
   create_default_ad_groups = each.value.create_default_ad_groups
+
+  default_consumption_budget_notification_emails = var.default_consumption_budget_notification_emails
+  default_consumption_budgets_notifications      = var.default_consumption_budgets_notifications
 }
 
 module "management_group_level_5" {
@@ -81,6 +93,9 @@ module "management_group_level_5" {
   subscriptions            = each.value.subscriptions
   ad_groups                = each.value.ad_groups
   create_default_ad_groups = each.value.create_default_ad_groups
+
+  default_consumption_budget_notification_emails = var.default_consumption_budget_notification_emails
+  default_consumption_budgets_notifications      = var.default_consumption_budgets_notifications
 }
 
 module "management_group_level_6" {
@@ -98,4 +113,7 @@ module "management_group_level_6" {
   subscriptions            = each.value.subscriptions
   ad_groups                = each.value.ad_groups
   create_default_ad_groups = each.value.create_default_ad_groups
+
+  default_consumption_budget_notification_emails = var.default_consumption_budget_notification_emails
+  default_consumption_budgets_notifications      = var.default_consumption_budgets_notifications
 }
