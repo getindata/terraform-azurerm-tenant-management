@@ -13,7 +13,7 @@ data "azurerm_policy_definition" "this" {
 
 module "this_management_group" {
   source  = "getindata/management-group/azurerm"
-  version = "1.0.1"
+  version = "1.0.2"
 
   context = module.this.context
 
