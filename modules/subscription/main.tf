@@ -7,7 +7,7 @@
 
 module "this_subscription" {
   source  = "getindata/subscription/azurerm"
-  version = "1.1.0"
+  version = "1.1.1"
   context = module.this.context
 
 
